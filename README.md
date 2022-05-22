@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
-The website link of this project is provided [here](https://rash-22.github.io/TextUtils-React/).
+The website link for this repository is provided [here](https://rash-22.github.io/TextUtils-React/).
 
 ## Available Scripts
 
