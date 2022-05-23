@@ -5,13 +5,11 @@ import About from './components/About'
 import Textform from './components/Textform';
 import { useState } from 'react';
 import Alert from './components/Alert';
-// import { Routes ,Route } from 'react-router-dom';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import { Routes ,Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 
 function App() {
@@ -52,12 +50,13 @@ function App() {
       <div className="container my-3">
       <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/>
       {/* <Router>
-      <Routes>
+      {/* <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/> */}
+      {/* <Routes>
       <Route excat path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/>} />
      <Route excat path="/About" element={<About/>} mode={Mode} />
       </Routes>
-    </Router> */}
-    </div>
+    // </Router> */} 
+      </div>
     </>
   );
 }

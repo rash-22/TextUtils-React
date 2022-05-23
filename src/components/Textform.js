@@ -84,14 +84,14 @@ export default function Textform(props) {
           onChange={handleOnChange}
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-2" onClick={handleUppercaseClick} >UPPERCASE</button>
-      <button className="btn btn-primary mx-2" onClick={handleLowercaseClick} >lowercase</button>
-      <button className="btn btn-primary mx-2" onClick={handleCapatalizeClick} >Capatalize Case</button>
-      <button className="btn btn-primary mx-2" onClick={handleCapatalize} >Sentence Case</button>
-      <button className="btn btn-primary mx-2" onClick={handleAlternatingClick} >aLtErNaTiNg CaSe</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleUppercaseClick} >UPPERCASE</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleLowercaseClick} >lowercase</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleCapatalizeClick} >Capatalize Case</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleCapatalize} >Sentence Case</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleAlternatingClick} >aLtErNaTiNg CaSe</button>
       <button className="btn btn-primary mx-2 my-2" onClick={handleCopy} >Copy Text</button>
-      <button className="btn btn-primary mx-2" onClick={handleExtraSpaces} >Remove extra spaces</button>
-      <button className="btn btn-primary mx-2" onClick={ClearSpace} >Clear Text</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces} >Remove extra spaces</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={ClearSpace} >Clear Text</button>
 
 
 
@@ -99,7 +99,7 @@ export default function Textform(props) {
     </div>
         <div className="container my-3 " style={{color:props.mode==='light'?'black':'white'}}>
             <h2>Your Text Summary</h2>
-            <p>{Text.length === 0?"0":Text.split(" ").length} words and {Text.length} characters</p>
+            <p>{Text.split(" ").filter((element) => {return element.length !== 0}).length} words and {Text.length} characters</p>
             <p> {0.008 * Text.split(" ").length} mintues read time </p>
             <h3>Preview</h3>
             <p>{Text.length>0?Text:'Enter something to preview yor text here'}</p>
