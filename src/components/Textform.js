@@ -84,14 +84,14 @@ export default function Textform(props) {
           onChange={handleOnChange}
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleUppercaseClick} >UPPERCASE</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleLowercaseClick} >lowercase</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleCapatalizeClick} >Capatalize Case</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleCapatalize} >Sentence Case</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleAlternatingClick} >aLtErNaTiNg CaSe</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleCopy} >Copy Text</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces} >Remove extra spaces</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={ClearSpace} >Clear Text</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleUppercaseClick} >UPPERCASE</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleLowercaseClick} >lowercase</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleCapatalizeClick} >Capatalize Case</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleCapatalize} >Sentence Case</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleAlternatingClick} >aLtErNaTiNg CaSe</button>
+      <button className="btn btn-primary mx-1 my-2" onClick={handleCopy} >Copy Text</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces} >Remove extra spaces</button>
+      <button className="btn btn-primary mx-1 my-1" onClick={ClearSpace} >Clear Text</button>
 
 
 
