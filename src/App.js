@@ -5,11 +5,11 @@ import About from './components/About'
 import Textform from './components/Textform';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import { Routes ,Route } from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+// import { Routes ,Route } from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
