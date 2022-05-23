@@ -30,13 +30,13 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#1a1a1a';
       showAlert("Dark Mode has been enabled","success");
-      document.title = "TextUtils - Dark Mode";
+      // document.title = "TextUtils - Dark Mode";
     }
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light Mode has been enabled","success")
-      document.title = "TextUtils - Light Mode";
+      // document.title = "TextUtils - Light Mode";
 
 
     }
@@ -45,18 +45,19 @@ function App() {
     <>
       {/* <Navbar title="TextUtils2" aboutText="About Us" homeText="Home"/> */}
       {/* <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/> */}
+       {/* <Router> */}
       <Navbar title="TextUtils"  toggleMode={toggleMode} mode={Mode}/> 
       <Alert alert={alert}/>
       <div className="container my-3">
-      <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/>
-      {/* <Router>
+      <Textform showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces..." mode={Mode}/> */
+      <About mode={Mode}/> */
       {/* <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/> */}
-      {/* <Routes>
-      <Route excat path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={Mode}/>} />
-     <Route excat path="/About" element={<About/>} mode={Mode} />
-      </Routes>
-    // </Router> */} 
-      </div>
+       {/* <Routes> */}
+      {/* <Route excat path="/" element={<Textform showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces..." mode={Mode}/>} />
+     <Route excat path="/About" element={<About mode={Mode}/>} />
+      </Routes> */}
+     </div>
+    {/* </Router>   */}
     </>
   );
 }

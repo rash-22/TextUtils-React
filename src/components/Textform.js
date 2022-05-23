@@ -73,36 +73,36 @@ export default function Textform(props) {
     return (
         <>
     <div className="container" style={{color:props.mode==='light'?'black':'white' }}>
-        <h1>{props.heading}</h1>
+        <h2 className="mb-3"><center>{props.heading}</center></h2>
       <div className="mb-3">
         <textarea
           className="form-control"
           id="myBox"
-          style={{backgroundColor:props.mode==='light'?'white':'#4c4c4c',color:props.mode==='dark'?'white':'black' }}
+          style={{backgroundColor:props.mode==='light'?'white':'rgb(40, 40, 40)',color:props.mode==='dark'?'white':'black' }}
           rows="9"
           value={Text}
           onChange={handleOnChange}
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-1 my-1" onClick={handleUppercaseClick} >UPPERCASE</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={handleLowercaseClick} >lowercase</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={handleCapatalizeClick} >Capatalize Case</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={handleCapatalize} >Sentence Case</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={handleAlternatingClick} >aLtErNaTiNg CaSe</button>
-      <button className="btn btn-primary mx-1 my-2" onClick={handleCopy} >Copy Text</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces} >Remove extra spaces</button>
-      <button className="btn btn-primary mx-1 my-1" onClick={ClearSpace} >Clear Text</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUppercaseClick} >UPPERCASE</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleLowercaseClick} >lowercase</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCapatalizeClick} >Capatalize Case</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCapatalize} >Sentence Case</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleAlternatingClick} >aLtErNaTiNg CaSe</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-2" onClick={handleCopy} >Copy Text</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces} >Remove extra spaces</button>
+      <button disabled={Text.length===0} className="btn btn-primary mx-1 my-1" onClick={ClearSpace} >Clear Text</button>
 
 
 
 
     </div>
         <div className="container my-3 " style={{color:props.mode==='light'?'black':'white'}}>
-            <h2>Your Text Summary</h2>
+            <h3>Your Text Summary</h3>
             <p>{Text.split(" ").filter((element) => {return element.length !== 0}).length} words and {Text.length} characters</p>
-            <p> {0.008 * Text.split(" ").length} mintues read time </p>
+            <p> {0.008 * Text.split(" ").filter((element)=> {return element.length!==0}).length} mintues read time </p>
             <h3>Preview</h3>
-            <p>{Text.length>0?Text:'Enter something to preview yor text here'}</p>
+            <p>{Text.length>0?Text:'Nothing to preview!'}</p>
         </div>
     </>
   );

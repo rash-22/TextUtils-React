@@ -6,6 +6,16 @@ export default function About(props) {
   //   backgroundColor: "white",
   // });
 
+  let myStyle = {
+    color: props.mode === 'dark'?'white':'black',
+    backgroundColor: props.mode === 'dark'?'#1a1a1a':'white'
+  }
+
+  let buttonStyle = {
+    color: props.mode === 'dark'?'white':'black',
+    backgroundColor: props.mode === 'dark'?'rgb(40 40 40)':'white'
+  }
+
   // const [btnText, setBtnText] = useState("Enable Dark mode");
 
   // const toggleMode = () => {
@@ -21,13 +31,14 @@ export default function About(props) {
   // };
 
   return (
-    <div className="container" >
+    <div className="container" style={myStyle} >
       <h1 className="my-3">About Us</h1>
       <div className="accordion" id="accordionExample" >
         <div className="accordion-item" >
           <h2 className="accordion-header" id="headingOne" >
             <button
               className="accordion-button"
+              style={buttonStyle} 
               type="button"
               // style={{color:props.mode==='light'?'black':'white',backgroundColor:props.mode==='light'?'white':'dark'}}
               data-bs-toggle="collapse"
@@ -35,7 +46,7 @@ export default function About(props) {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Text Utility
+              About Text Utility
             </button>
           </h2>
           <div
@@ -45,7 +56,7 @@ export default function About(props) {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle} >
               This application allows you to specify a Text Fonts style supplied
               with in Windows and update entire Autodesk® Revit® projects text
               note style, including all the families loaded on the project.
@@ -57,13 +68,13 @@ export default function About(props) {
             <button
               className="accordion-button collapsed"
               type="button"
-              // style={myStyle}
+              style={buttonStyle}
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              Free to use
             </button>
           </h2>
           <div
@@ -72,7 +83,7 @@ export default function About(props) {
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle} >
               <strong>This is the second item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classNamees that we use to style each element. These classNamees
@@ -88,14 +99,14 @@ export default function About(props) {
           <h2 className="accordion-header" id="headingThree">
             <button
               className="accordion-button collapsed"
-              // style={myStyle}
+              style={buttonStyle}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              Browser Compatible
             </button>
           </h2>
           <div
@@ -104,7 +115,7 @@ export default function About(props) {
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" >
+            <div className="accordion-body" style={myStyle} >
               <strong>This is the third item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classNamees that we use to style each element. These classNamees
